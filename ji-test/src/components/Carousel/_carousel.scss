@@ -1,0 +1,38 @@
+.carousel {
+    margin-top: 0.625rem;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    width: clamp(320px, calc(600/1903 *100vw), 37.5rem);
+    height: clamp(320px, calc(600/1903 *100vw), 37.5rem);
+
+    &-item {
+        &>img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &-caption {
+        left: 7.4%;
+        bottom: 7.7%;
+        padding: 0;
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    height: 1.5rem;
+    width: 2.188rem;
+    opacity: 1;
+    top: auto !important;
+    bottom: 11.1%;
+}
+
+.carousel-control-prev {
+    left: 80.17%;
+}
+
+.carousel-control-next {
+    right: 4.8%;
+}

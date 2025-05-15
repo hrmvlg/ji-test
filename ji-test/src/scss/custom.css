@@ -12022,6 +12022,7 @@ body {
   height: 52.1%;
   left: 0;
   bottom: 0;
+  z-index: 0;
 }
 
 .button {
@@ -12036,4 +12037,39 @@ body {
   max-height: 4.0625rem;
   max-width: 17.1875rem;
   white-space: nowrap;
+}
+
+.carousel {
+  margin-top: 0.625rem;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  width: clamp(320px, 31.5291644771vw, 37.5rem);
+  height: clamp(320px, 31.5291644771vw, 37.5rem);
+}
+.carousel-item > img {
+  max-width: 100%;
+  height: auto;
+}
+.carousel-caption {
+  left: 7.4%;
+  bottom: 7.7%;
+  padding: 0;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  height: 1.5rem;
+  width: 2.188rem;
+  opacity: 1;
+  top: auto !important;
+  bottom: 11.1%;
+}
+
+.carousel-control-prev {
+  left: 80.17%;
+}
+
+.carousel-control-next {
+  right: 4.8%;
 }/*# sourceMappingURL=custom.css.map */
