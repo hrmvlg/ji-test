@@ -12072,4 +12072,15 @@ body {
 
 .carousel-control-next {
   right: 4.8%;
+}
+
+.information {
+  width: clamp(320px, 31.5291644771vw, 793px);
+}
+.information__title {
+  margin-bottom: 2.625rem;
+}
+.information__description {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 }/*# sourceMappingURL=custom.css.map */
