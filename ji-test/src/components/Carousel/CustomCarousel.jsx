@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import CustomButton from '../Button/CustomButton';
 import Next from "../../assets/icons/arrow-right.svg?react";
 import Prev from "../../assets/icons/arrow-left.svg?react";
+import imageSrc from '@/assets/slider/slider-image-1.jpg';
 
 const CustomCarousel = () => {
     return (
@@ -15,8 +16,8 @@ const CustomCarousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block"
-                    src="src/assets/slider/slider-image-1.jpg"
-                    alt="First slide"
+                    src={imageSrc}
+                    alt="Первый слайд"
                     width={600}
                     height={600}
                 />
@@ -27,8 +28,8 @@ const CustomCarousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block"
-                    src="src/assets/slider/slider-image-1.jpg"
-                    alt="First slide"
+                    src={imageSrc}
+                    alt="Второй слайд"
                     width={600}
                     height={600}
                 />
@@ -39,8 +40,8 @@ const CustomCarousel = () => {
             <Carousel.Item>
                 <img
                     className="d-block"
-                    src="src/assets/slider/slider-image-1.jpg"
-                    alt="First slide"
+                    src={imageSrc}
+                    alt="Третий слайд"
                     width={600}
                     height={600}
                 />
