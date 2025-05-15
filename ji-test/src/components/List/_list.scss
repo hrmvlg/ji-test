@@ -1,0 +1,39 @@
+.information {
+    &-list {
+        width: 100% !important;
+        column-gap: clamp(50px, calc(84/1903 *100vw), 84px);
+        row-gap: clamp(30px, calc(84/1903 *100vw), 59px);
+
+        padding-left: 12px;
+
+        &__item {
+            width: 340px;
+            height: 84px;
+        }
+
+        &__title {
+            color: $gray-700;
+            text-transform: uppercase;
+            line-height: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        &__marker {
+            color: $red;
+        }
+
+        &__title,
+        &__marker {
+            font-size: 1.25rem;
+            font-weight: 700;
+            min-width: 1.563rem;
+            min-height: 1.5rem;
+        }
+
+        &__description {
+            line-height: 19px;
+            max-width: 304px;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 .information {
-    width: clamp(320px, calc(600/1903 *100vw), 793px);
+    z-index: 1;
+    width: clamp(320px, calc(793/1903 *100vw), 793px) !important;
+
 
     &__title {
         margin-bottom: 2.625rem;
@@ -8,5 +10,6 @@
     &__description {
         font-size: 1.5rem;
         line-height: 1.75rem;
+        margin-bottom: 7.75rem;
     }
 }

@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import CustomList from "../List/CustomList";
 
 export default function Information() {
     return (
@@ -10,6 +11,7 @@ export default function Information() {
                 <br />
                 После завершения всех процедур в нашем детейлинг-центре, ваш автомобиль будет выглядеть как новый.
             </p>
+            <CustomList />
         </Container>
     );
 };
