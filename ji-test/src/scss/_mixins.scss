@@ -1,0 +1,11 @@
+@mixin fluid-text($max: 16, $min: 14, $screen: 1903) {
+    font-size: clamp(#{$min}px,
+        #{calc(($max/ $screen) * 100)}vw,
+        #{$max}px);
+}
+
+@mixin fluid-line-height($max: 19, $min: 16, $screen: 1903) {
+    line-height: clamp(#{$min}px,
+        #{calc(($max / $screen) * 100)}vw,
+        #{$max}px);
+}

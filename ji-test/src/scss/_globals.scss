@@ -1,3 +1,7 @@
+html {
+    @include fluid-text(16, 14);
+}
+
 body {
     background-color: $white;
 }
@@ -6,7 +10,17 @@ body {
     position: relative;
     min-height: 750px;
     padding-block: 4.375rem;
-    column-gap: 6.688rem;
+    gap: 107px;
+
+    @include media-breakpoint-between(xs, xxl) {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    @media (max-width: 1526px) {
+        gap: 20px;
+    }
 
     &::after {
         content: '';
@@ -17,5 +31,21 @@ body {
         left: 0;
         bottom: 0;
         z-index: 0;
+
+        @media (max-width: 1612px) {
+            height: 65%;
+        }
+
+        @include media-breakpoint-down(xxl) {
+            height: 38%;
+        }
+
+        @include media-breakpoint-down(lg) {
+            height: 41%;
+        }
+
+        @include media-breakpoint-between(lg, xxl) {
+            height: 40%;
+        }
     }
 }

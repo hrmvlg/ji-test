@@ -14,18 +14,19 @@ export default function CustomList() {
     };
 
     return (
-        <Row className="information-list">{
+        <Row className="information-list ">{
             items.map((item, index) => (
                 <Col
                     xs={6}
+                    sm={1}
                     md={6}
                     lg={6}
                     key={item.id}
                     className="information-list__item"
                 >
                     <Row
-                        className='d-flex align-items-start flex-nowrap'
-                        style={{ columnGap: '13.5px' }}
+                        className='information-list__item-wrapper d-flex align-items-start flex-nowrap'
+
                     >
                         <Col xs={1}
                             className='d-flex justify-content-center align-items-center'
@@ -33,7 +34,7 @@ export default function CustomList() {
                         >
                             <span className='information-list__marker'> {formatNumber(index)} </span>
                         </Col>
-                        <Col xs={11} className='p-0'>
+                        <Col xs={11} className='information-list__group p-0'>
                             <p className='information-list__title p-0'> {item.title} </p>
                             <p className="information-list__description m-0">{item.description}</p>
                         </Col>

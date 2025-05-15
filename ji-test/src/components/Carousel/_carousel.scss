@@ -1,10 +1,12 @@
 .carousel {
     margin-top: 0.625rem;
+    margin-left: 5px;
     z-index: 1;
     overflow: hidden;
     position: relative;
-    width: clamp(320px, calc(600/1903 *100vw), 37.5rem);
-    height: clamp(320px, calc(600/1903 *100vw), 37.5rem);
+
+    width: clamp(300px, calc(600/1400 *100vw), 600px);
+    height: clamp(300px, calc(600/1400 *100vw), 600px);
 
     &-item {
         &>img {
@@ -14,8 +16,8 @@
     }
 
     &-caption {
-        left: 7.4%;
-        bottom: 7.7%;
+        left: 7%;
+        bottom: 7.9%;
         padding: 0;
     }
 }
@@ -26,13 +28,28 @@
     width: 2.188rem;
     opacity: 1;
     top: auto !important;
-    bottom: 11.1%;
+    bottom: 11.2%;
+
+    &>span>svg {
+        width: 30px;
+        height: 30px;
+
+        @include media-breakpoint-between(xs, lg) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    @include media-breakpoint-between(xs, xl) {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .carousel-control-prev {
-    left: 80.17%;
+    left: 80%;
 }
 
 .carousel-control-next {
-    right: 4.8%;
+    right: 5%;
 }

@@ -1,21 +1,43 @@
 .information {
     &-list {
-        width: 100% !important;
-        column-gap: clamp(50px, calc(84/1903 *100vw), 84px);
-        row-gap: clamp(30px, calc(84/1903 *100vw), 59px);
+        width: 100%;
+        column-gap: clamp(21px, 4.4vw, 84px);
+        row-gap: clamp(14.75px, 3.1vw, 59px);
+        padding-left: 0.75rem;
 
-        padding-left: 12px;
+        @include media-breakpoint-between(xs, lg) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 0;
+        }
 
         &__item {
-            width: 340px;
-            height: 84px;
+            min-height: 82px;
+            width: clamp(290px, calc(340/1903 *100vw), 340px);
+
+            @include media-breakpoint-between(xs, lg) {
+                max-height: 82px;
+                width: 100%;
+            }
+
+            &-wrapper {
+                column-gap: 0.844rem;
+
+                @media (max-width: 1612px) {
+                    column-gap: 2px;
+                }
+            }
         }
 
         &__title {
             color: $gray-700;
             text-transform: uppercase;
-            line-height: 1.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
+
+            @include media-breakpoint-between(xs, lg) {
+                margin-bottom: 0.938rem;
+            }
         }
 
         &__marker {
@@ -24,14 +46,15 @@
 
         &__title,
         &__marker {
-            font-size: 1.25rem;
+            @include fluid-text(20, 16);
+            @include fluid-line-height(24, 19);
             font-weight: 700;
             min-width: 1.563rem;
             min-height: 1.5rem;
         }
 
         &__description {
-            line-height: 19px;
+            line-height: 1.188rem;
             max-width: 304px;
             font-weight: 500;
         }

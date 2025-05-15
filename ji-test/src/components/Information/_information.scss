@@ -1,15 +1,33 @@
 .information {
     z-index: 1;
-    width: clamp(320px, calc(793/1903 *100vw), 793px) !important;
+    max-width: 793px;
 
+    @include media-breakpoint-between(xs, xxl) {
+        flex-direction: column;
+        justify-content: space-between;
+        width: clamp(300px, calc(793/1903 *100vw), 793px)
+    }
+
+    @include media-breakpoint-between(xs, md) {
+        width: 300px;
+    }
+
+    &__group {
+        width: 100%;
+    }
 
     &__title {
+        @include fluid-text(40, 24);
         margin-bottom: 2.625rem;
     }
 
     &__description {
-        font-size: 1.5rem;
-        line-height: 1.75rem;
-        margin-bottom: 7.75rem;
+        @include fluid-text(24, 16);
+        @include fluid-line-height(28, 19);
+        margin-bottom: clamp(1.5rem, calc(124/1903 * 100vw), 7.75rem);
+
+        @media (max-width: 1612px) {
+            margin-bottom: 2.625rem;
+        }
     }
 }
